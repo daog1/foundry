@@ -10,7 +10,11 @@ homepage.workspace = true
 repository.workspace = true
 
 [build-dependencies]
-vergen = { version = "8", default-features = false, features = ["build", "git", "git2"] }
+vergen = { version = "8", default-features = false, features = [
+  "build",
+  "git",
+  "git2",
+] }
 
 [dependencies]
 # foundry internal
@@ -35,7 +39,11 @@ clap_complete = "4"
 clap_complete_fig = "4"
 yansi = "0.5"
 tracing-error = "0.2"
-tracing-subscriber = { version = "0.3", features = ["registry", "env-filter", "fmt"] }
+tracing-subscriber = { version = "0.3", features = [
+  "registry",
+  "env-filter",
+  "fmt",
+] }
 tracing = "0.1"
 watchexec = "2"
 comfy-table = "6"
@@ -79,6 +87,7 @@ thiserror = "1"
 indicatif = "0.17"
 parking_lot = "0.12"
 
+
 [dev-dependencies]
 anvil.workspace = true
 foundry-utils.workspace = true
@@ -87,7 +96,9 @@ pretty_assertions = "1"
 toml = "0.7"
 serial_test = "2"
 criterion = "0.4"
-svm = { package = "svm-rs", version = "0.3", default-features = false, features = ["rustls"] }
+svm = { package = "svm-rs", version = "0.3", default-features = false, features = [
+  "rustls",
+] }
 globset = "0.4"
 
 [features]

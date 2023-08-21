@@ -123,11 +123,15 @@ ethers-middleware = { git = "https://github.com/gakonst/ethers-rs", default-feat
 ethers-etherscan = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
 ethers-solc = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
 
-chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+chrono = { version = "0.4", default-features = false, features = [
+  "clock",
+  "std",
+] }
 hex = { package = "const-hex", version = "1.6", features = ["hex"] }
 solang-parser = "=0.3.1"
 
-#[patch."https://github.com/gakonst/ethers-rs"]
+[patch."https://github.com/gakonst/ethers-rs"]
+ethers-core = { path = "../ethers-rs/ethers-core" }
 #ethers = { path = "../ethers-rs/ethers" }
 #ethers-addressbook = { path = "../ethers-rs/ethers-addressbook" }
 #ethers-contract = { path = "../ethers-rs/ethers-contract" }
